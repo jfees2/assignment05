@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 05 - Employee Management Application</title>
+    <script src="js/employee-management.js"></script>
+    <style>
+        #table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        #table th {
+            border: 1px solid #A4A4A4;  
+            background-color: #A4A4A4;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        } 
+        
+        #table th, #table #employee-table {
+            border-right: 1px solid white;
+            text-align: center;
+        }
+        
+        #table tr:nth-child(even) {
+            background-color: #ddd;
+            border: 1px solid #ddd;
+            
+        }
+        #table tr:nth-child(odd) {
+            border: 1px solid #ddd;
+        }
+        
+        #sum-bttn {
+            padding: 5px 10px;
+            background-color: lightgrey;
+        }
+        
+        #name-error, #title-error, #extension-error {
+            display: none;
+        }
+        
+        input[type=text], selct {
+            width: 200px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        label:first-child {
+            padding-right: 28px;
+        }
+        
+        label:nth-child(5)  {
+            padding-right: 35px;
+        }
+        
+        #sum-bttn {
+            cursor: pointer;
+            margin-left: 220px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>The Employee Management Application</h2>
+    <form>
+        <h3>Add New Employee</h3>
+        <div>
+            <label>Name:</label> <input type="text" id="new-name"><span id="name-error" style="color:red">*Please Enter a Name</span><br>
+            <label>Title:</label> <input type="text" id="new-title"><span id="title-error"  style="color:red">*Please Enter a Title</span><br>
+            <label>Extension:</label> <input type="text" id="new-extension"><span id="extension-error" style="color:red">*Please Enter an Extension</span><br>
+            <input type="submit" id="sum-bttn" value="ADD">
+        </div>
+    </form>
+    <h5>Showing <span id="employee-count"></span> Employee<span id="plural"></span></h5>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>NAME</th>
+                <th>TITLE</th>
+                <th>EXTENSION</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="employee-table">
+            
+        </tbody>
+    </table>
+</body>
+</html> 
